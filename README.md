@@ -35,6 +35,3 @@ Scatch is a backend-powered marketplace where users can explore, buy, and sell s
    npm start
    ```
 
-## Special Thanks 🎉
-A huge shoutout to *Piyush Garg's YouTube channel* for helping me learn backend development! 🚀
-
