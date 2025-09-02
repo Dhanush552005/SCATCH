@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  mongo_db:
+    container_name: database_container
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo_db:/data/db
+
+  app:
+    build: .
+    ports:
+      - 4000:3000
+    environment:
+      EXPRESS_SESSION_SECRET: my_super_secret_key
+      JWT_KEY: ajdjjgijirhuhfeijfnuud
+      MONGO_URL: mongodb://database_container:27017/Scatch
+    depends_on:
+      - mongo_db
+
+volumes:
+  mongo_db: {}
